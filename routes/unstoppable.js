@@ -6,6 +6,7 @@ const router = express.Router();
 router.get('/domains', async (req, res) => {
   const { query } = req.query;
 
+  // Partner API V3 from UD
   try {
     const response = await axios.get(
       `https://api.ud-sandbox.com/partner/v3/suggestions/domains?query=${query}`,

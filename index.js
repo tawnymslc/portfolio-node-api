@@ -9,11 +9,11 @@ const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 
+app.use(express.json()); //parse JSON
+
 app.use('/unstoppable', require('./routes/unstoppable'));
 
-app.get('/test', (req, res) => {
-  res.send('Backend is live and routing correctly!');
-});
+app.use('/stripe', require('./routes/stripe'));
 
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}`);
