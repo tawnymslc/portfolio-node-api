@@ -31,6 +31,10 @@ app.get('/unstoppable/domains', async (req, res) => {
   }
 });
 
+app.get('/test', (req, res) => {
+    res.send('Backend is live and routing correctly!');
+  });
+  
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}`);
 });
