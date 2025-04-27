@@ -1,5 +1,5 @@
 const express = require('express');
-const axios = require('axios'); // ✅ Needed for your route
+const axios = require('axios'); // 
 const cors = require('cors');
 const dotenv = require('dotenv');
 
@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 
-// ✅ Place your route BELOW `app` initialization
+
 app.get('/unstoppable/domains', async (req, res) => {
   const { query } = req.query;
 
@@ -34,7 +34,7 @@ app.get('/unstoppable/domains', async (req, res) => {
 app.get('/test', (req, res) => {
     res.send('Backend is live and routing correctly!');
   });
-  
+
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}`);
 });
