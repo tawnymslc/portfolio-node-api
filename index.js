@@ -15,6 +15,8 @@ app.use('/unstoppable', require('./routes/unstoppable'));
 
 app.use('/stripe', require('./routes/stripe'));
 
+app.use('/spotify', require('./routes/spotify'));
+
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}`);
 });
